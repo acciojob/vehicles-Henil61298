@@ -43,17 +43,15 @@ public class F1 extends Car {
             return;
         }
 
-        if(newSpeed == 0) {
+        if(newSpeed <= 0) {
             //Stop the car, set gear as 1
             super.changeGear(1);
             return;
         }
         //for all other cases, change the gear accordingly
 
-        if(newSpeed > 0) {
-//            changeSpeed(newSpeed, super.getCurrentDirection());
-            super.changeGear(1);
-        }
+        //            changeSpeed(newSpeed, super.getCurrentDirection());
+        super.changeGear(1);
 
     }
 }
